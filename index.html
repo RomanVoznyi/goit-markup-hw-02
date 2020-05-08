@@ -3,16 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title class="novisible" lang="en">Web Studio v.2</title>
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
     />
     <link rel="stylesheet" href="./css/styles.css" />
-    <title lang="en">Web Studio v.2</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+    />
   </head>
   <body>
     <!--Шапка документа-->
@@ -22,33 +22,29 @@
           ><span class="header-first-logo">Web</span> Studio</a
         >
         <ul class="header-list-pages">
-          <li><a class="header-page" href="./job.html">Студия</a></li>
+          <li>
+            <a class="header-page activepage" href="./index.html">Студия</a>
+          </li>
           <li><a class="header-page" href="./portfolio.html">Портфолио</a></li>
           <li><a class="header-page" href="./contacts.html">Контакты</a></li>
         </ul>
       </nav>
       <ul class="header-list-contacts">
         <li>
-          <!--Значек Конверта не ставил, будет в aria-label-->
-          <p aria-label="facebook"></p>
-          <a class="header-ico-contacts" href="" aria-labelledby="COOKIES"
-            >Ico</a
-          >
           <a
-            class="header-contacts"
+            class="header-contacts-mail fa-envelope"
             href="mailto:info@devstudio.com"
             target="_blanc"
-            aria-label="OK"
             >info@devstudio.com</a
           >
         </li>
         <li>
-          <!--Значек Телефона не ставил, будет в aria-label-->
-          <a class="header-ico-contacts" href="" aria-label="значек телефона"
-            >Ico</a
+          <a
+            class="header-contacts-phone"
+            href="tel:+380961111111"
+            target="_blanc"
           >
-          <a class="header-contacts" href="tel:+380961111111" target="_blanc"
-            >+38 096 111 11 11</a
+            +38 096 111 11 11</a
           >
         </li>
       </ul>
@@ -57,46 +53,64 @@
     <!--Основной документ-->
     <main>
       <!--Главная секция-->
-      <section class="sec-hero-box">
+      <section class="hero-box">
         <h1>
           эффективные решения <br />
           для вашего бизнеса
         </h1>
-        <a class="sec-hero-button" href="./job.html">Заказать услугу</a>
+        <a class="hero-order button accent" href="./portfolio.html"
+          >Заказать услугу</a
+        >
       </section>
 
       <!--Секция Преимущества-->
-      <section class="sec-adv-box">
-        <h2 class="sec-adv-title">Преимущества</h2>
-        <ul>
-          <li>
-            <img src="./img/antenna.svg" alt="ico-antenna" />
-            <h3 class="sec-adv-advantage">Внимание к деталям</h3>
-            <p class="sec-adv-description">
+      <section class="adv-box">
+        <h2 class="novisible">Преимущества</h2>
+        <ul class="adv-list">
+          <li class="adv-list-item">
+            <img
+              class="adv-ico"
+              src="./img/index-img/antenna.svg"
+              alt="ico-antenna"
+            />
+            <h3 class="advantage">Внимание к деталям</h3>
+            <p class="adv-description">
               Идейные соображения, а также начало повседневной работы по
               формированию позиции.
             </p>
           </li>
-          <li>
-            <img src="./img/clock.svg" alt="ico-clock" />
-            <h3 class="sec-adv-advantage">Пунктуальность</h3>
-            <p class="sec-adv-description">
+          <li class="adv-list-item">
+            <img
+              class="adv-ico"
+              src="./img/index-img/clock.svg"
+              alt="ico-clock"
+            />
+            <h3 class="advantage">Пунктуальность</h3>
+            <p class="adv-description">
               Задача организации, в особенности же рамки и место обучения кадров
               влечет за собой.
             </p>
           </li>
-          <li>
-            <img src="./img/pc.svg" alt="ico-computer" />
-            <h3 class="sec-adv-advantage">Планирование</h3>
-            <p class="sec-adv-description">
+          <li class="adv-list-item">
+            <img
+              class="adv-ico"
+              src="./img/index-img/pc.svg"
+              alt="ico-computer"
+            />
+            <h3 class="advantage">Планирование</h3>
+            <p class="adv-description">
               Равным образом консультация с широким активом в значительной
               степени обуславливает.
             </p>
           </li>
-          <li>
-            <img src="./img/astronaut.svg" alt="ico-astronaut" />
-            <h3 class="sec-adv-advantage">Современные технологии</h3>
-            <p class="sec-adv-description">
+          <li class="adv-list-item">
+            <img
+              class="adv-ico"
+              src="./img/index-img/astronaut.svg"
+              alt="ico-astronaut"
+            />
+            <h3 class="advantage">Современные технологии</h3>
+            <p class="adv-description">
               Значимость этих проблем настолько очевидна, что реализация
               плановых заданий.
             </p>
@@ -105,226 +119,218 @@
       </section>
 
       <!--Секция Наша деятельность-->
-      <section class="sec-job-box">
-        <h2 class="sec-job-title">Чем мы занимаемся</h2>
-        <ul>
-          <li>
-            <a href="./job.html">
-              <img
-                src="./img/laptop.jpg"
-                alt="img-laptop"
-                width="380"
-                height="294"
-              />
-              <h3 class="sec-job-job">Десктопные приложения</h3>
+      <section class="job-box">
+        <h2 class="job-title title">Чем мы занимаемся</h2>
+        <ul class="job-list">
+          <li class="job-item">
+            <img
+              src="./img/index-img/laptop.jpg"
+              width="380"
+              height="294"
+              alt="laptop-image"
+            />
+            <a href="./portfolio.html">
+              <h3 class="job">Десктопные приложения</h3>
             </a>
           </li>
-          <li>
-            <a href="./job.html">
-              <img
-                src="./img/smartphone.jpg"
-                alt="img-smartphone"
-                width="380"
-                height="294"
-              />
-              <h3 class="sec-job-job">Мобильные приложения</h3>
+          <li class="job-item">
+            <img
+              src="./img/index-img/smartphone.jpg"
+              width="380"
+              height="294"
+              alt="smartphone-image"
+            />
+            <a href="./portfolio.html">
+              <h3 class="job">Мобильные приложения</h3>
             </a>
           </li>
-          <li>
-            <a href="./job.html">
-              <img
-                src="./img/monitor.jpg"
-                alt="img-monitor"
-                width="380"
-                height="294"
-              />
-              <h3 class="sec-job-job">Дизайнерские решения</h3>
+          <li class="job-item right-block">
+            <img
+              src="./img/index-img/monitor.jpg"
+              width="380"
+              height="294"
+              alt="monitor-image"
+            />
+            <a href="./portfolio.html">
+              <h3 class="job">Дизайнерские решения</h3>
             </a>
           </li>
         </ul>
       </section>
 
       <!--Секция Наша команда-->
-      <section class="sec-team-box">
-        <h2 class="sec-team-title">Наша команда</h2>
-        <ul lang="en">
-          <li>
+      <section class="team-box">
+        <h2 class="team-title title">Наша команда</h2>
+        <ul class="team-list" lang="en">
+          <!--John Smith -->
+          <li class="team-item">
             <img
-              src="./img/johnsmith.jpg"
+              src="./img/index-img/johnsmith.jpg"
               alt="photo"
               width="278"
               height="260"
             />
-            <h3 class="sec-team-name">John Smith</h3>
-            <p class="sec-team-prof">Product Designer</p>
-            <ul>
-              <!--Значки Соцсетей не ставил, будут в aria-label-->
-              <li>
+            <h3 class="team-name">
+              John Smith
+            </h3>
+            <p class="team-prof">Product Designer</p>
+            <ul class="team-social-list">
+              <li class="social-item">
                 <a
+                  class="team-social-link fab fa-instagram"
                   href="https://www.instagram.com"
                   target="_blanc"
-                  aria-label="Ссылка на Instagram"
-                  >Instagram</a
-                >
+                ></a>
               </li>
-              <li>
+              <li class="social-item">
                 <a
-                  href="https://www.facebook.com"
-                  target="_blanc"
-                  aria-label="Ссылка на Facebook"
-                  >Facebook</a
-                >
-              </li>
-              <li>
-                <a
+                  class="team-social-link fab fa-twitter"
                   href="https://twitter.com"
                   target="_blanc"
-                  aria-label="Ссылка на Twitter"
-                  >Twitter</a
-                >
+                ></a>
               </li>
-              <li>
+              <li class="social-item">
                 <a
+                  class="team-social-link fab fa-facebook-f"
+                  href="https://www.facebook.com"
+                  target="_blanc"
+                ></a>
+              </li>
+              <li class="social-item right-block">
+                <a
+                  class="team-social-link fab fa-linkedin-in"
                   href="https://www.linkedin.com"
                   target="_blanc"
-                  aria-label="Ссылка на LinkedIn"
-                  >LinkedIn</a
-                >
+                ></a>
               </li>
             </ul>
           </li>
-          <li>
+          <!--Marta Stewart -->
+          <li class="team-item">
             <img
-              src="./img/martastewart.jpg"
+              src="./img/index-img/martastewart.jpg"
               alt="photo"
               width="278"
               height="260"
             />
-            <h3 class="sec-team-name">Marta Stewart</h3>
-            <p class="sec-team-prof">Frontend Developer</p>
-            <ul>
-              <!--Значки Соцсетей не ставил, будут в aria-label-->
-              <li>
+            <h3 class="team-name">
+              Marta Stewart
+            </h3>
+            <p class="team-prof">Frontend Developer</p>
+            <ul class="team-social-list">
+              <li class="social-item">
                 <a
+                  class="team-social-link fab fa-instagram"
                   href="https://www.instagram.com"
                   target="_blanc"
-                  aria-label="Ссылка на Instagram"
-                  >Instagram</a
-                >
+                ></a>
               </li>
-              <li>
+              <li class="social-item">
                 <a
-                  href="https://www.facebook.com"
-                  target="_blanc"
-                  aria-label="Ссылка на Facebook"
-                  >Facebook</a
-                >
-              </li>
-              <li>
-                <a
+                  class="team-social-link fab fa-twitter"
                   href="https://twitter.com"
                   target="_blanc"
-                  aria-label="Ссылка на Twitter"
-                  >Twitter</a
-                >
+                ></a>
               </li>
-              <li>
+              <li class="social-item">
                 <a
+                  class="team-social-link fab fa-facebook-f"
+                  href="https://www.facebook.com"
+                  target="_blanc"
+                ></a>
+              </li>
+              <li class="social-item right-block">
+                <a
+                  class="team-social-link fab fa-linkedin-in"
                   href="https://www.linkedin.com"
                   target="_blanc"
-                  aria-label="Ссылка на LinkedIn"
-                  >LinkedIn</a
-                >
+                ></a>
               </li>
             </ul>
           </li>
-          <li>
+          <!--Robert Jakis -->
+          <li class="team-item">
             <img
-              src="./img/robertjakis.jpg"
+              src="./img/index-img/robertjakis.jpg"
               alt="photo"
               width="278"
               height="260"
             />
-            <h3 class="sec-team-name">Robert Jakis</h3>
-            <p class="sec-team-prof">Marketing</p>
-            <ul>
-              <!--Значки Соцсетей не ставил, будут в aria-label-->
-              <li>
+            <h3 class="team-name">
+              Robert Jakis
+            </h3>
+            <p class="team-prof">Marketing</p>
+            <ul class="team-social-list">
+              <li class="social-item">
                 <a
+                  class="team-social-link fab fa-instagram"
                   href="https://www.instagram.com"
                   target="_blanc"
-                  aria-label="Ссылка на Instagram"
-                  >Instagram</a
-                >
+                ></a>
               </li>
-              <li>
+              <li class="social-item">
                 <a
-                  href="https://www.facebook.com"
-                  target="_blanc"
-                  aria-label="Ссылка на Facebook"
-                  >Facebook</a
-                >
-              </li>
-              <li>
-                <a
+                  class="team-social-link fab fa-twitter"
                   href="https://twitter.com"
                   target="_blanc"
-                  aria-label="Ссылка на Twitter"
-                  >Twitter</a
-                >
+                ></a>
               </li>
-              <li>
+              <li class="social-item">
                 <a
+                  class="team-social-link fab fa-facebook-f"
+                  href="https://www.facebook.com"
+                  target="_blanc"
+                ></a>
+              </li>
+              <li class="social-item right-block">
+                <a
+                  class="team-social-link fab fa-linkedin-in"
                   href="https://www.linkedin.com"
                   target="_blanc"
-                  aria-label="Ссылка на LinkedIn"
-                  >LinkedIn</a
-                >
+                ></a>
               </li>
             </ul>
           </li>
-          <li>
+          <!--Martin Doe -->
+          <li class="team-item">
             <img
-              src="./img/martindoe.jpg"
+              src="./img/index-img/martindoe.jpg"
               alt="photo"
               width="278"
               height="260"
             />
-            <h3 class="sec-team-name">Martin Doe</h3>
-            <p class="sec-team-prof">UI Designer</p>
-            <ul>
-              <!--Значки Соцсетей не ставил, будут в aria-label-->
-              <li>
+            <h3 class="team-name">
+              Martin Doe
+            </h3>
+            <p class="team-prof">UI Designer</p>
+            <ul class="team-social-list">
+              <li class="social-item">
                 <a
+                  class="team-social-link fab fa-instagram"
                   href="https://www.instagram.com"
                   target="_blanc"
-                  aria-label="Ссылка на Instagram"
-                  >Instagram</a
-                >
+                ></a>
               </li>
-              <li>
+              <li class="social-item">
                 <a
-                  href="https://www.facebook.com"
-                  target="_blanc"
-                  aria-label="Ссылка на Facebook"
-                  >Facebook</a
-                >
-              </li>
-              <li>
-                <a
+                  class="team-social-link fab fa-twitter"
                   href="https://twitter.com"
                   target="_blanc"
-                  aria-label="Ссылка на Twitter"
-                  >Twitter</a
-                >
+                ></a>
               </li>
-              <li>
+              <li class="social-item">
                 <a
+                  class="team-social-link fab fa-facebook-f"
+                  href="https://www.facebook.com"
+                  target="_blanc"
+                ></a>
+              </li>
+              <li class="social-item right-block">
+                <a
+                  class="team-social-link fab fa-linkedin-in"
                   href="https://www.linkedin.com"
                   target="_blanc"
-                  aria-label="Ссылка на LinkedIn"
-                  >LinkedIn</a
-                >
+                ></a>
               </li>
             </ul>
           </li>
@@ -332,37 +338,56 @@
       </section>
 
       <!--Секция Клиенты-->
-      <section class="sec-client-box">
-        <h2 class="sec-client-title">Постоянные клиенты</h2>
-        <ul>
-          <li>
-            <a href="" target="_blanc"
-              ><img src="./img/client1.svg" alt="logo"
+      <section class="client-box">
+        <h2 class="client-title title">Постоянные клиенты</h2>
+        <ul class="client-list">
+          <li class="client-item">
+            <a class="client-link" href="" target="_blanc"
+              ><img
+                class="client-logo"
+                src="./img/index-img/client1.svg"
+                alt="logo"
+              />
+            </a>
+          </li>
+          <li class="client-item">
+            <a class="client-link" href="" target="_blanc"
+              ><img
+                class="client-logo"
+                src="./img/index-img/client2.svg"
+                alt="logo"
             /></a>
           </li>
-          <li>
-            <a href="" target="_blanc"
-              ><img src="./img/client2.svg" alt="logo"
+          <li class="client-item">
+            <a class="client-link" href="" target="_blanc"
+              ><img
+                class="client-logo"
+                src="./img/index-img/client3.svg"
+                alt="logo"
             /></a>
           </li>
-          <li>
-            <a href="" target="_blanc"
-              ><img src="./img/client3.svg" alt="logo"
+          <li class="client-item">
+            <a class="client-link" href="" target="_blanc"
+              ><img
+                class="client-logo"
+                src="./img/index-img/client4.svg"
+                alt="logo"
             /></a>
           </li>
-          <li>
-            <a href="" target="_blanc"
-              ><img src="./img/client4.svg" alt="logo"
+          <li class="client-item">
+            <a class="client-link" href="" target="_blanc"
+              ><img
+                class="client-logo"
+                src="./img/index-img/client5.svg"
+                alt="logo"
             /></a>
           </li>
-          <li>
-            <a href="" target="_blanc"
-              ><img src="./img/client5.svg" alt="logo"
-            /></a>
-          </li>
-          <li>
-            <a href="" target="_blanc"
-              ><img src="./img/client6.svg" alt="logo"
+          <li class="client-item">
+            <a class="client-link" href="" target="_blanc"
+              ><img
+                class="client-logo"
+                src="./img/index-img/client6.svg"
+                alt="logo"
             /></a>
           </li>
         </ul>
@@ -371,80 +396,99 @@
 
     <!--Футер-->
     <footer class="footer-box">
-      <div class="foot-adress-box">
-        <a class="logo" href="./index.html" target="_blanc" lang="en"
-          ><span class="first-logo">Web</span> Studio</a
-        >
-        <address>
-          <ul>
-            <li>
+      <div class="footer-firstlevel">
+        <div class="foot-adress-box">
+          <a class="foot-logo" href="./index.html" target="_blanc" lang="en"
+            ><span class="foot-first-logo">Web</span> Studio</a
+          >
+          <address>
+            <ul class="foot-adress-list">
+              <li class="foot-adress-item">
+                <a
+                  class="foot-adress"
+                  href="https://www.google.com.ua/maps/place/бульвар+Леси+Украинки,+26,+Киев,+02000"
+                  target="_blanc"
+                  >г. Киев, пр-т Леси Украинки, 26</a
+                >
+              </li>
+              <li class="foot-adress-item">
+                <a
+                  class="foot-mail"
+                  href="mailto:info@example.com"
+                  target="_blanc"
+                  >info@example.com</a
+                >
+              </li>
+              <li class="foot-adress-item">
+                <a class="foot-phone" href="tel:+380991111111" target="_blanc"
+                  >+38 099 111 11 11</a
+                >
+              </li>
+            </ul>
+          </address>
+        </div>
+
+        <div class="foot-links-box">
+          <strong class="foot-links-title">присоединяйтесь</strong>
+          <ul class="foot-social-list">
+            <li class="social-item">
               <a
-                class="foot-adress"
-                href="https://www.google.com.ua/maps/place/бульвар+Леси+Украинки,+26,+Киев,+02000"
+                class="foot-social-link fab fa-instagram"
+                href="https://www.instagram.com"
                 target="_blanc"
-                >г. Киев, пр-т Леси Украинки, 26</a
-              >
+              ></a>
             </li>
-            <li>
+            <li class="social-item">
               <a
-                class="foot-mail"
-                href="mailto:info@example.com"
+                class="foot-social-link fab fa-twitter"
+                href="https://twitter.com"
                 target="_blanc"
-                >info@example.com</a
-              >
+              ></a>
             </li>
-            <li>
-              <a class="foot-phone" href="tel:+380991111111" target="_blanc"
-                >+38 099 111 11 11</a
-              >
+            <li class="social-item">
+              <a
+                class="foot-social-link fab fa-facebook-f"
+                href="https://www.facebook.com"
+                target="_blanc"
+              ></a>
+            </li>
+            <li class="social-item right-block">
+              <a
+                class="foot-social-link fab fa-linkedin-in"
+                href="https://www.linkedin.com"
+                target="_blanc"
+              ></a>
             </li>
           </ul>
-        </address>
+        </div>
+        <div class="foot-signin-box">
+          <strong class="foot-signin-title">подпишитесь на рассылку</strong>
+          <form class="foot-signin" action="">
+            <input
+              type="email"
+              class="foot-input"
+              name="e-mail"
+              placeholder="E-mail"
+              id=""
+            />
+            <button type="submit" class="foot-button button accent">
+              Подписаться
+              <img
+                class="foot-button-ico"
+                src="./img/index-img/send.svg"
+                width="24"
+                height="24"
+                alt="ico plane"
+              />
+            </button>
+          </form>
+        </div>
       </div>
-
-      <div class="foot-links">
-        <strong class="foot-link-title">присоединяйтесь</strong>
-        <ul lang="en">
-          <!--Значки Соцсетей не ставил, будут в aria-label-->
-          <li>
-            <a
-              href="https://www.instagram.com"
-              target="_blanc"
-              aria-label="Ссылка на Instagram"
-              >Instagram</a
-            >
-          </li>
-          <li>
-            <a
-              href="https://www.facebook.com"
-              target="_blanc"
-              aria-label="Ссылка на Facebook"
-              >Facebook</a
-            >
-          </li>
-          <li>
-            <a
-              href="https://twitter.com"
-              target="_blanc"
-              aria-label="Ссылка на Twitter"
-              >Twitter</a
-            >
-          </li>
-          <li>
-            <a
-              href="https://www.linkedin.com"
-              target="_blanc"
-              aria-label="Ссылка на LinkedIn"
-              >LinkedIn</a
-            >
-          </li>
-        </ul>
+      <div class="footer-secondlevel">
+        <p class="footer-developers" lang="en">
+          2020 | Developed by GoIT Students
+        </p>
       </div>
-      <div class="foot-signin">
-        <strong class="foot-signin-title">подпишитесь на рассылку</strong>
-        <!-- Блок подписки разметим позже -->
-      </div>
-      <p lang="en">2020 | Developed by GoIT Students</p>
     </footer>
   </body>
 </html>
